@@ -1,6 +1,12 @@
 {
   "name": "psv2",
   "version": "2.0.0",
-  "authors": ["Robin Hoover <robin.hoover@gmail.com> (www.moosedog,io)"],
-  "dependencies": {}
+  "authors": [
+    "Robin Hoover <robin.hoover@gmail.com> (www.moosedog,io)"
+  ],
+  "dependencies": {
+    "angular": "~1.2.16",
+    "angular-animate": "~1.2.16",
+    "angular-touch": "~1.2.16"
+  }
 }
