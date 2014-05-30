@@ -1,0 +1,13 @@
+{
+  "name": "psv2",
+  "version": "2.0.0",
+  "description": "PowerSealUSA",
+  "author": "Robin Hoover <robin.hoover@gmail.com> (www.moosedog,io)",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.8.0"
+  }
+
+}
