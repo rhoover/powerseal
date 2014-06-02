@@ -34,6 +34,7 @@
 <meta name="msapplication-TileImage" content="images/apple-touch-icon-144x144-precomposed.png">
 <meta name="msapplication-TileColor" content="#222222">
 <meta http-equiv="cleartype" content="on">
+
 <!-- icons -->
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
 <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
@@ -53,20 +54,30 @@
 
 </head>
 
-<body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-    <a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'psv2' ); ?></a>
+<body ng-app="psv2App">
 
-    <header id="masthead" class="site-header" role="banner">
-        <div class="site-branding">
-            <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-            <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-        </div>
+    <header class="header">
+        <h1 class="title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
-        <nav id="site-navigation" class="main-navigation" role="navigation">
-            <button class="menu-toggle"><?php _e( 'Primary Menu', 'psv2' ); ?></button>
-            <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-        </nav><!-- #site-navigation -->
-    </header><!-- #masthead -->
+    </header><!-- end .header -->
+
+    <?php
+        //courtesy of:  http://zoerooney.com/blog/tutorials/removing-list-items-wordpress-menus/
+        //combine with addition to functions.php and tweaked by yours truly
+        // first let's get our nav menu using the regular wp_nav_menu() function with special parameters
+        $cleanermenu = wp_nav_menu( array(
+            'theme_location' => 'primarymenu', // we've registered a theme location in functions.php
+            'container' => false, // this is usually a div outside the menu ul, we don't need it hence false
+            'menu_id' => '', //added by me
+            'menu_class' => 'nav-menu', //added by me
+            'items_wrap' => '<nav class="%2$s" ng-class="moveme"><p class="close-menu" ng-click="moveme=\' \' ">Close Menu</p>%3$s</nav>', // replacing the ul with nav, remove id too
+            'echo' => false, // don't display it just yet, instead we're storing it in the variable $cleanermenu
+        ) );
+        // Find the closing bracket of each li and the opening of the link (><a), then all instances of "<li"
+        $find = array('><a','<li');
+        // Replace the ><a with nothing (a.k.a. delete) and the "<li" with "<a"
+        $replace = array('','<a');
+        echo str_replace( $find, $replace, $cleanermenu );
+    ?><!-- end .nav-menu -->
 
     <div id="content" class="site-content">

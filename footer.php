@@ -17,7 +17,6 @@
 			<?php printf( __( 'Theme: %1$s by %2$s.', 'psv2' ), 'psv2', '<a href="http://www.moosedog.io" rel="designer">Robin Hoover</a>' ); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
-</div><!-- #page -->
 
 <?php wp_footer(); ?>
 
