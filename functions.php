@@ -44,7 +44,7 @@ function psv2_setup() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Menu', 'psv2' ),
 	) );
-	
+
 	/*
 	 * Switch default core markup for search form, comment form, and comments
 	 * to output valid HTML5.
@@ -92,17 +92,52 @@ add_action( 'widgets_init', 'psv2_widgets_init' );
  * Enqueue scripts and styles.
  */
 function psv2_scripts() {
-	wp_enqueue_style( 'psv2-style', get_stylesheet_uri() );
+	// wp_enqueue_style( 'psv2-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'psv2-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	// wp_enqueue_script( 'psv2-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
 
-	wp_enqueue_script( 'psv2-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
+	// wp_enqueue_script( 'psv2-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'psv2_scripts' );
+
+/**
+* Remove Extraneous Crap
+*/
+remove_action('wp_head', 'wlwmanifest_link'); // Might be necessary if you or other people on this site use Windows Live Writer
+remove_action('wp_head', 'index_rel_link'); // remove link to index page
+remove_action('wp_head', 'start_post_rel_link', 10, 0); // Start link
+remove_action('wp_head', 'parent_post_rel_link', 10, 0); // Prev link
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0); // Display relational links for the posts adjacent to the current post.
+remove_action('wp_head', 'adjacent_posts_rel_link_wp_head', 10, 0 );
+remove_filter( 'the_content', 'capital_P_dangit' ); // Get outta my Wordpress codez dangit!
+remove_filter( 'the_title', 'capital_P_dangit' );
+remove_filter( 'comment_text', 'capital_P_dangit' );
+
+function rah_remove_version() {return '';}
+add_filter('the_generator', 'rah_remove_version');
+
+/**
+* Remove Extra Class Names From <article> Primarily
+*/
+function rah_post_names($classes) {
+    $classes = array_diff($classes, array("page", "type-page", "status-publish", "hentry", "post", "post-id", "type-post", "format-standard", "category-uncategorized"));
+    return $classes;
+}
+add_filter('post_class', 'rah_post_names');
+
+/**
+ * Remove Classes and IDs from wp_nav_menu() li items except current item and basic menu-item class
+ */
+add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1);
+add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
+// add_filter('page_css_class', 'my_css_attributes_filter', 100, 1);
+function my_css_attributes_filter($var) {
+  return is_array($var) ? array_intersect($var, array('menu-item','current-menu-item')) : '';
+}
 
 /**
  * Implement the Custom Header feature.
@@ -112,19 +147,19 @@ add_action( 'wp_enqueue_scripts', 'psv2_scripts' );
 /**
  * Custom template tags for this theme.
  */
-require get_template_directory() . '/inc/template-tags.php';
+// require get_template_directory() . '/inc/template-tags.php';
 
 /**
  * Custom functions that act independently of the theme templates.
  */
-require get_template_directory() . '/inc/extras.php';
+// require get_template_directory() . '/inc/extras.php';
 
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+// require get_template_directory() . '/inc/customizer.php';
 
 /**
  * Load Jetpack compatibility file.
  */
-require get_template_directory() . '/inc/jetpack.php';
+// require get_template_directory() . '/inc/jetpack.php';
