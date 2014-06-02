@@ -11,7 +11,7 @@
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 
-<title><?php wp_title( '|', true, 'left' ); ?></title>
+<title><?php wp_title( '|', TRUE, 'left' ); ?></title>
 
 <!-- generic -->
 <meta name="description" content="PowerSeal USA, Your Powersports Cylinder Repair Source">
