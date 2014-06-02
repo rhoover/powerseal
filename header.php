@@ -56,6 +56,8 @@
 
 <body ng-app="psv2App">
 
+    <div class="back-button">Back</div>
+
     <header class="header">
         <h1 class="title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 
@@ -80,4 +82,4 @@
         echo str_replace( $find, $replace, $cleanermenu );
     ?><!-- end .nav-menu -->
 
-    <div id="content" class="site-content">
+    <div class="site-content">
