@@ -22,5 +22,16 @@ Use it to make something cool, have fun, and share what you've learned with othe
 @import "breakpoint";
 
 @import "core/compass";
+@import "core/susy";
+@import "core/breakpoints";
+@import "core/typography";
+
+@import "helpers/susy-vars";
+@import "helpers/placeholders";
+@import "helpers/colors";
+@import "helpers/wp-images";
+
+@import "components/body";
+@import "components/header";
 
 

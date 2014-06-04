@@ -1,0 +1,6 @@
+.header {
+    @include span(24);
+    @include clearfix;
+    padding-left: span(2 of 24);
+    padding-right: span(2 of 24);
+}

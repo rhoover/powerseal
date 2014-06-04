@@ -1,0 +1,12 @@
+body {
+    @include container;
+    @include clearfix;
+    @include span(24);
+    padding-left: 0;
+    padding-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    @include susy-breakpoint($bp-medium, $columns-medium);
+    @include susy-breakpoint($bp-small, $columns-small);
+    height: 100%;
+}
