@@ -1,6 +1,24 @@
 .header {
+    position: fixed;
     @include span(24);
     @include clearfix;
     padding-left: span(2 of 24);
     padding-right: span(2 of 24);
+    background: $black;
+    border-bottom: .1em solid darken($black, 10%);
+}
+
+.back-button {
+    display: none;
+}
+
+.title {
+    @extend %large-font;
+    background-image: url('images/powerseal-logo-large.png');
+    background-repeat: no-repeat;
+    height: image-height('images/powerseal-logo-large.png');
+    &-link {
+        width: 375px;
+        height: 72px;
+    }
 }

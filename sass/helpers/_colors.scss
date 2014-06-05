@@ -1,0 +1,5 @@
+$black: rgb(45, 45, 45);
+$black-lite: lighten($black, 15%);
+$black-dark: darken($black, 15%);
+
+$content-gradient: linear-gradient(top, $black 0%, $black-lite 100%);

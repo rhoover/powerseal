@@ -56,11 +56,16 @@
 
 <body ng-app="psv2App">
 
+    <div class="hero-banner"></div>
+
 
     <header class="header">
         <div class="back-button">Back</div>
-        <h1 class="title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-
+        <!-- <h1 class="title"> -->
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
+                <h1 class="title"></h1>
+            </a>
+        <!-- </h1> -->
     </header><!-- end .header -->
 
     <?php
