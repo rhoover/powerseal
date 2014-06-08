@@ -10,6 +10,12 @@
 
 .back-button {
     display: none;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        display: inline-block;
+    }
+    @include susy-breakpoint($bp-small, $columns-small) {
+        display: inline-block;
+    }
 }
 
 .title {

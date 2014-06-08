@@ -26,7 +26,7 @@ html {
   font-size: 1.3125em;
   line-height: 1.5234286em;
 }
-@media (min-width: 54em) {
+@media (min-width: 37.5em) and (max-width: 64em) {
   .title {
     font-size: 1.75em;
     line-height: 1.5231429em;
@@ -73,7 +73,7 @@ body {
   margin-bottom: 0;
   height: 100%;
   background: #535353;
-  font-family: Helvitica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 body::after {
   content: " ";
@@ -109,6 +109,16 @@ body::after {
 
 .back-button {
   display: none;
+}
+@media (min-width: 37.5em) and (max-width: 64em) {
+  .back-button {
+    display: inline-block;
+  }
+}
+@media (max-width: 37.5em) {
+  .back-button {
+    display: inline-block;
+  }
 }
 
 .title {
