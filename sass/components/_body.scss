@@ -8,7 +8,7 @@ body {
     margin-bottom: 0;
     height: 100%;
     background: $black-lite;
-    font-family: Helvitica, Arial, sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     @include susy-breakpoint($bp-medium, $columns-medium);
     @include susy-breakpoint($bp-small, $columns-small);
 }

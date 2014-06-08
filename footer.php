@@ -16,5 +16,10 @@
 
 <?php wp_footer(); ?>
 
+<script src="/wp-content/themes/psv2/js/libraries/angular/angular.js"></script>
+<script src="/wp-content/themes/psv2/js/libraries/angular-animate/angular-animate.js"></script>
+<script src="/wp-content/themes/psv2/js/libraries/angular-touch/angular-touch.js"></script>
+
+<script src="/wp-content/themes/psv2/js/psv2/app.js"></script>
 </body>
 </html>
