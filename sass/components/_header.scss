@@ -2,10 +2,17 @@
     position: fixed;
     @include span(24);
     @include clearfix;
-    padding-left: span(2 of 24);
-    padding-right: span(2 of 24);
+    padding: rhythm(.5, 16px) span(2 of 24) 0 span(2 of 24);
     background: $black;
     border-bottom: .1em solid darken($black, 10%);
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(18);
+        padding: rhythm(.5, 16px) span(1 of 18) 0 span(1 of 18);
+    }
+    @include susy-breakpoint($bp-small, $columns-small) {
+        @include span(12);
+        padding: 0;
+    }
 }
 
 .back-button {
@@ -19,12 +26,23 @@
 }
 
 .title {
-    @extend %large-font;
-    background-image: url('images/powerseal-logo-large.png');
-    background-repeat: no-repeat;
-    height: image-height('images/powerseal-logo-large.png');
-    &-link {
-        width: 375px;
-        height: 72px;
+    @extend %responsive-trigger;
+    @include span(12 of 24);
+    height: rhythm(3.5, 16px);
+    &:before {
+        content: " ";
+        float: left;
+        height: image-height('images/powerseal-logo-large.png');
+        width: 100%;
+        background: url('images/powerseal-logo-large.png') no-repeat;
+    }
+    @include susy-breakpoint($bp-small, $columns-small) {
+        &:before {
+            content: " ";
+            float: left;
+            height: image-height('images/powerseal-logo-small.png');
+            width: 100%;
+            background: url('images/powerseal-logo-small.png') no-repeat;
+        }
     }
 }

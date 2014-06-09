@@ -1,6 +1,6 @@
 %responsive-trigger {
     &:after {
-        content: "phone";
+        content: "computer";
         display: block;
         position: absolute;
         top: 0px;
@@ -8,8 +8,8 @@
         @include susy-breakpoint($bp-medium, $columns-medium) {
             content: "tablet";
         }
-        @include susy-breakpoint($bp-large, $columns-large) {
-            content: "computer";
+        @include susy-breakpoint($bp-small, $columns-small) {
+            content: "phone";
         }
     }
 }

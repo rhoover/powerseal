@@ -61,11 +61,7 @@
 
     <header class="header">
         <div class="back-button">Back</div>
-        <!-- <h1 class="title"> -->
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                <h1 class="title"></h1>
-            </a>
-        <!-- </h1> -->
+            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="title" ></a>
     </header><!-- end .header -->
 
     <?php

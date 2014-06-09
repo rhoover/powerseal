@@ -22,21 +22,28 @@ html {
   line-height: 1.5em;
 }
 
-.title {
-  font-size: 1.3125em;
-  line-height: 1.5234286em;
-}
-@media (min-width: 37.5em) and (max-width: 64em) {
-  .title {
-    font-size: 1.75em;
-    line-height: 1.5231429em;
-  }
-}
-
 *, *::before, *::after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+.title:after {
+  content: "computer";
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: -1000px;
+}
+@media (min-width: 37.5em) and (max-width: 64em) {
+  .title:after {
+    content: "tablet";
+  }
+}
+@media (max-width: 37.5em) {
+  .title:after {
+    content: "phone";
+  }
 }
 
 .alignleft {
@@ -101,10 +108,27 @@ body::after {
   padding-right: 0.482001%;
   overflow: hidden;
   *zoom: 1;
-  padding-left: 8.3333333%;
-  padding-right: 8.3333333%;
+  padding: 0.75em 8.3333333% 0 8.3333333%;
   background: #2d2d2d;
   border-bottom: 0.1em solid #141414;
+}
+@media (min-width: 37.5em) and (max-width: 64em) {
+  .header {
+    width: 100%;
+    float: left;
+    padding-left: 0.642668%;
+    padding-right: 0.642668%;
+    padding: 0.75em 5.5555556% 0 5.5555556%;
+  }
+}
+@media (max-width: 37.5em) {
+  .header {
+    width: 100%;
+    float: left;
+    padding-left: 0.964002%;
+    padding-right: 0.964002%;
+    padding: 0;
+  }
 }
 
 .back-button {
@@ -122,13 +146,27 @@ body::after {
 }
 
 .title {
-  background-image: url("images/powerseal-logo-large.png");
-  background-repeat: no-repeat;
-  height: 72px;
+  width: 50%;
+  float: left;
+  padding-left: 0.482001%;
+  padding-right: 0.482001%;
+  height: 5.25em;
 }
-.title-link {
-  width: 375px;
+.title:before {
+  content: " ";
+  float: left;
   height: 72px;
+  width: 100%;
+  background: url("images/powerseal-logo-large.png") no-repeat;
+}
+@media (max-width: 37.5em) {
+  .title:before {
+    content: " ";
+    float: left;
+    height: 29px;
+    width: 100%;
+    background: url("images/powerseal-logo-small.png") no-repeat;
+  }
 }
 
 .nav-menu {
