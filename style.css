@@ -28,7 +28,7 @@ html {
   box-sizing: border-box;
 }
 
-.title:after {
+.hero-banner:after {
   content: "computer";
   display: block;
   position: absolute;
@@ -36,12 +36,12 @@ html {
   left: -1000px;
 }
 @media (min-width: 37.5em) and (max-width: 64em) {
-  .title:after {
+  .hero-banner:after {
     content: "tablet";
   }
 }
 @media (max-width: 37.5em) {
-  .title:after {
+  .hero-banner:after {
     content: "phone";
   }
 }
@@ -89,15 +89,58 @@ body::after {
 }
 
 .hero-banner {
-  display: block;
+  z-index: -10;
+}
+
+.hero-banner.large {
   position: absolute;
-  top: 0;
+  top: 6em;
   width: 100%;
+  float: left;
+  padding-left: 0.482001%;
+  padding-right: 0.482001%;
+  overflow: hidden;
+  *zoom: 1;
+  padding-left: 0;
+  padding-right: 0;
   height: 600px;
   background-image: url("images/powerseal-hero-large.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
-  z-index: -10;
+}
+
+.hero-banner.medium {
+  position: absolute;
+  top: 4.5em;
+  width: 100%;
+  float: left;
+  padding-left: 0.642668%;
+  padding-right: 0.642668%;
+  overflow: hidden;
+  *zoom: 1;
+  padding-left: 0;
+  padding-right: 0;
+  height: 600px;
+  background-image: url("images/powerseal-hero-large.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.hero-banner.small {
+  position: absolute;
+  top: 4.5em;
+  width: 100%;
+  float: left;
+  padding-left: 0.964002%;
+  padding-right: 0.964002%;
+  overflow: hidden;
+  *zoom: 1;
+  padding-left: 0;
+  padding-right: 0;
+  height: 188px;
+  background-image: url("images/powerseal-hero-small.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
 
 .header {

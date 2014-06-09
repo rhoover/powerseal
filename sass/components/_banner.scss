@@ -1,11 +1,43 @@
 .hero-banner {
-    display: block;
+    @extend %responsive-trigger;
+    z-index: -10;
+}
+
+.hero-banner.large {
     position: absolute;
-    top: 0;
-    width: 100%;
+    top: rhythm(4, 16px);
+    @include span(24 of 24);
+    @include clearfix;
+    padding-left: 0;
+    padding-right: 0;
+    height: image-height('images/powerseal-hero-large.jpg');
+    @include background-image(url('images/powerseal-hero-large.jpg'));
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.hero-banner.medium {
+    position: absolute;
+    top: rhythm(3, 16px);
+    @include span(18 of 18);
+    @include clearfix;
+    padding-left: 0;
+    padding-right: 0;
     height: image-height('images/powerseal-hero-large.jpg');
     background-image: url('images/powerseal-hero-large.jpg');
     background-size: 100% auto;
     background-repeat: no-repeat;
-    z-index: -10;
+}
+
+.hero-banner.small {
+    position: absolute;
+    top: rhythm(3, 16px);
+    @include span(12 of 12);
+    @include clearfix;
+    padding-left: 0;
+    padding-right: 0;
+    height: image-height('images/powerseal-hero-small.jpg');
+    background-image: url('images/powerseal-hero-small.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
 }

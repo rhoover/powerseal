@@ -26,7 +26,6 @@
 }
 
 .title {
-    @extend %responsive-trigger;
     @include span(12 of 24);
     height: rhythm(3.5, 16px);
     &:before {
