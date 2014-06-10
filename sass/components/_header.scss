@@ -23,7 +23,8 @@
         @include span(first 3 of 18);
         padding-top: rhythm(.25, 16px);
         padding-bottom: rhythm(.25, 16px);
-        margin: rhythm(.75, 16px) 0 0 0;
+        -webkit-margin-before: 0;
+        margin: 0 0 rhythm(1, 16px) 0;
         text-align: center;
         color: $white;
         border-radius: .25em;
@@ -49,7 +50,8 @@
         @include span(last 3 of 18);
         padding-top: rhythm(.25, 16px);
         padding-bottom: rhythm(.25, 16px);
-        margin: rhythm(.75, 16px) 0 0 0;
+        -webkit-margin-before: 0;
+        margin: 0 0 rhythm(1, 16px) 0;
         text-align: center;
         color: $white;
         border-radius: .25em;
@@ -72,26 +74,28 @@
     @include span(12 of 24 no-gutters);
     height: rhythm(3.5, 16px);
     &:before {
-        content: " ";
-        float: left;
-        height: image-height('images/powerseal-logo-large.png');
-        width: 100%;
-        background: url('images/powerseal-logo-large.png') no-repeat;
+            content: url('images/powerseal-logo-large.png');
+            display: block;
+            text-align: center;
     }
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(10 of 18 no-gutters);
-        padding-left: span(2 of 18);
+        $height: image-height('images/powerseal-logo-medium.png');
+        height: $height;
+        &:before {
+            content: url('images/powerseal-logo-medium.png');
+            display: block;
+            text-align: center;
+        }
     }
     @include susy-breakpoint($bp-small, $columns-small) {
         @include span(5 of 12 no-gutters);
         $height: image-height('images/powerseal-logo-small.png');
         height: $height;
-        padding: 0 0 0 gutters(.5em);
         &:before {
-            content: " ";
-            float: left;
-            width: 100%;
-            background: url('images/powerseal-logo-small.png') no-repeat;
+            content: url('images/powerseal-logo-small.png');
+            display: block;
+            text-align: center;
         }
     }
 }
