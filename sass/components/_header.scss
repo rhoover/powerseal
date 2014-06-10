@@ -1,17 +1,18 @@
 .header {
     position: fixed;
-    @include span(24);
+    @include span(24 of 24 no-gutters);
     @include clearfix;
     padding: rhythm(.5, 16px) span(2 of 24) 0 span(2 of 24);
     background: $black;
     border-bottom: .1em solid darken($black, 10%);
     @include susy-breakpoint($bp-medium, $columns-medium) {
-        @include span(18);
-        padding: rhythm(.5, 16px) span(1 of 18) 0 span(1 of 18);
+        @include span(18 of 18);
+        padding: rhythm(.75, 16px) span(1 of 18) 0 span(1 of 18);
     }
     @include susy-breakpoint($bp-small, $columns-small) {
-        @include span(12);
-        padding: 0;
+        @include span(12 of 12 no-gutters);
+        padding: rhythm(.5, 16px) 0 rhythm(.5, 16px) 0;
+        background: lighten($black, 5%);
     }
 }
 
@@ -19,14 +20,56 @@
     display: none;
     @include susy-breakpoint($bp-medium, $columns-medium) {
         display: inline-block;
+        @include span(first 3 of 18);
+        padding-top: rhythm(.25, 16px);
+        padding-bottom: rhythm(.25, 16px);
+        margin: rhythm(.75, 16px) 0 0 0;
+        text-align: center;
+        color: $white;
+        border-radius: .25em;
+        border: .1em solid rgba($white, .5);
     }
     @include susy-breakpoint($bp-small, $columns-small) {
         display: inline-block;
+        @include span(first 3 of 12);
+        padding-top: rhythm(.25, 16px);
+        padding-bottom: rhythm(.25, 16px);
+        margin: 0 gutters(1em);
+        text-align: center;
+        color: $white;
+        border-radius: .25em;
+        border: .1em solid rgba($white, .5);
+    }
+}
+
+.menu-button {
+    display: none;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        display: inline-block;
+        @include span(last 3 of 18);
+        padding-top: rhythm(.25, 16px);
+        padding-bottom: rhythm(.25, 16px);
+        margin: rhythm(.75, 16px) 0 0 0;
+        text-align: center;
+        color: $white;
+        border-radius: .25em;
+        border: .1em solid rgba($white, .5);
+    }
+    @include susy-breakpoint($bp-small, $columns-small) {
+        display: inline-block;
+        @include span(last 3 of 12);
+        padding-top: rhythm(.25, 16px);
+        padding-bottom: rhythm(.25, 16px);
+        margin: 0 gutters(1em) 0 0;
+        text-align: center;
+        color: $white;
+        border-radius: .25em;
+        border: .1em solid rgba($white, .5);
     }
 }
 
 .title {
-    @include span(12 of 24);
+    @include span(12 of 24 no-gutters);
     height: rhythm(3.5, 16px);
     &:before {
         content: " ";
@@ -35,11 +78,18 @@
         width: 100%;
         background: url('images/powerseal-logo-large.png') no-repeat;
     }
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(10 of 18 no-gutters);
+        padding-left: span(2 of 18);
+    }
     @include susy-breakpoint($bp-small, $columns-small) {
+        @include span(5 of 12 no-gutters);
+        $height: image-height('images/powerseal-logo-small.png');
+        height: $height;
+        padding: 0 0 0 gutters(.5em);
         &:before {
             content: " ";
             float: left;
-            height: image-height('images/powerseal-logo-small.png');
             width: 100%;
             background: url('images/powerseal-logo-small.png') no-repeat;
         }

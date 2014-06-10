@@ -1,9 +1,7 @@
 body {
     @include container;
     @include clearfix;
-    @include span(24);
-    padding-left: 0;
-    padding-right: 0;
+    @include span(24 no-gutters);
     margin-top: 0;
     margin-bottom: 0;
     height: 100%;

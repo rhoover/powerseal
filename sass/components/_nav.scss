@@ -3,7 +3,27 @@
     top: 0;
     right: 0;
     z-index: 50;
-    color: whitesmoke;
+    padding: rhythm(1.5, 16px) span(2 of 24) 0 0;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        display: none;
+    }
+    @include susy-breakpoint($bp-small, $columns-small) {
+        display: none;
+    }
+}
+
+.menu-item {
+    padding: 0 gutters(1em);
+    border-left: .1em solid rgba($white, .5);
+    color: rgba($white, .5);
+    text-decoration: none;
+    transition: color 0.5s ease;
+    &:first-of-type {
+        border-left: none;
+    }
+    &:hover {
+        color: $white;
+    }
 }
 
 .close-menu {

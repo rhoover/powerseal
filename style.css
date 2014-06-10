@@ -72,10 +72,6 @@ body {
   *zoom: 1;
   width: 100%;
   float: left;
-  padding-left: 0.482001%;
-  padding-right: 0.482001%;
-  padding-left: 0;
-  padding-right: 0;
   margin-top: 0;
   margin-bottom: 0;
   height: 100%;
@@ -97,12 +93,8 @@ body::after {
   top: 6em;
   width: 100%;
   float: left;
-  padding-left: 0.482001%;
-  padding-right: 0.482001%;
   overflow: hidden;
   *zoom: 1;
-  padding-left: 0;
-  padding-right: 0;
   height: 600px;
   background-image: url("images/powerseal-hero-large.jpg");
   background-size: 100% auto;
@@ -114,12 +106,8 @@ body::after {
   top: 4.5em;
   width: 100%;
   float: left;
-  padding-left: 0.642668%;
-  padding-right: 0.642668%;
   overflow: hidden;
   *zoom: 1;
-  padding-left: 0;
-  padding-right: 0;
   height: 600px;
   background-image: url("images/powerseal-hero-large.jpg");
   background-size: 100% auto;
@@ -128,15 +116,11 @@ body::after {
 
 .hero-banner.small {
   position: absolute;
-  top: 4.5em;
+  top: 3em;
   width: 100%;
   float: left;
-  padding-left: 0.964002%;
-  padding-right: 0.964002%;
   overflow: hidden;
   *zoom: 1;
-  padding-left: 0;
-  padding-right: 0;
   height: 188px;
   background-image: url("images/powerseal-hero-small.jpg");
   background-size: 100% auto;
@@ -147,8 +131,6 @@ body::after {
   position: fixed;
   width: 100%;
   float: left;
-  padding-left: 0.482001%;
-  padding-right: 0.482001%;
   overflow: hidden;
   *zoom: 1;
   padding: 0.75em 8.3333333% 0 8.3333333%;
@@ -161,16 +143,15 @@ body::after {
     float: left;
     padding-left: 0.642668%;
     padding-right: 0.642668%;
-    padding: 0.75em 5.5555556% 0 5.5555556%;
+    padding: 1.125em 5.5555556% 0 5.5555556%;
   }
 }
 @media (max-width: 37.5em) {
   .header {
     width: 100%;
     float: left;
-    padding-left: 0.964002%;
-    padding-right: 0.964002%;
-    padding: 0;
+    padding: 0.75em 0 0.75em 0;
+    background: #3a3a3a;
   }
 }
 
@@ -180,19 +161,75 @@ body::after {
 @media (min-width: 37.5em) and (max-width: 64em) {
   .back-button {
     display: inline-block;
+    width: 16.6666667%;
+    float: left;
+    padding-left: 0.642668%;
+    padding-right: 0.642668%;
+    padding-top: 0.375em;
+    padding-bottom: 0.375em;
+    margin: 1.125em 0 0 0;
+    text-align: center;
+    color: lightgray;
+    border-radius: .25em;
+    border: 0.1em solid rgba(211, 211, 211, 0.5);
   }
 }
 @media (max-width: 37.5em) {
   .back-button {
     display: inline-block;
+    width: 25%;
+    float: left;
+    padding-left: 0.964002%;
+    padding-right: 0.964002%;
+    padding-top: 0.375em;
+    padding-bottom: 0.375em;
+    margin: 0 0.5em;
+    text-align: center;
+    color: lightgray;
+    border-radius: .25em;
+    border: 0.1em solid rgba(211, 211, 211, 0.5);
+  }
+}
+
+.menu-button {
+  display: none;
+}
+@media (min-width: 37.5em) and (max-width: 64em) {
+  .menu-button {
+    display: inline-block;
+    width: 16.6666667%;
+    float: right;
+    padding-left: 0.642668%;
+    padding-right: 0.642668%;
+    padding-top: 0.375em;
+    padding-bottom: 0.375em;
+    margin: 1.125em 0 0 0;
+    text-align: center;
+    color: lightgray;
+    border-radius: .25em;
+    border: 0.1em solid rgba(211, 211, 211, 0.5);
+  }
+}
+@media (max-width: 37.5em) {
+  .menu-button {
+    display: inline-block;
+    width: 25%;
+    float: right;
+    padding-left: 0.964002%;
+    padding-right: 0.964002%;
+    padding-top: 0.375em;
+    padding-bottom: 0.375em;
+    margin: 0 0.5em 0 0;
+    text-align: center;
+    color: lightgray;
+    border-radius: .25em;
+    border: 0.1em solid rgba(211, 211, 211, 0.5);
   }
 }
 
 .title {
   width: 50%;
   float: left;
-  padding-left: 0.482001%;
-  padding-right: 0.482001%;
   height: 5.25em;
 }
 .title:before {
@@ -202,11 +239,23 @@ body::after {
   width: 100%;
   background: url("images/powerseal-logo-large.png") no-repeat;
 }
+@media (min-width: 37.5em) and (max-width: 64em) {
+  .title {
+    width: 55.5555556%;
+    float: left;
+    padding-left: 11.1111111%;
+  }
+}
 @media (max-width: 37.5em) {
+  .title {
+    width: 41.6666667%;
+    float: left;
+    height: 29px;
+    padding: 0 0 0 0.25em;
+  }
   .title:before {
     content: " ";
     float: left;
-    height: 29px;
     width: 100%;
     background: url("images/powerseal-logo-small.png") no-repeat;
   }
@@ -217,9 +266,37 @@ body::after {
   top: 0;
   right: 0;
   z-index: 50;
-  color: whitesmoke;
+  padding: 2.25em 8.3333333% 0 0;
+}
+@media (min-width: 37.5em) and (max-width: 64em) {
+  .nav-menu {
+    display: none;
+  }
+}
+@media (max-width: 37.5em) {
+  .nav-menu {
+    display: none;
+  }
+}
+
+.menu-item {
+  padding: 0 0.5em;
+  border-left: 0.1em solid rgba(211, 211, 211, 0.5);
+  color: rgba(211, 211, 211, 0.5);
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+.menu-item:first-of-type {
+  border-left: none;
+}
+.menu-item:hover {
+  color: lightgray;
 }
 
 .close-menu {
   display: none;
+}
+
+.footer {
+  background: red;
 }
