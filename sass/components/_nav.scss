@@ -1,14 +1,32 @@
 .nav-menu {
     position: fixed;
     top: 0;
-    right: 0;
+    width: 100%;
+    @include translate3d(0, 0, 0);
+    text-align: right;
     z-index: 50;
     padding: rhythm(1.5, 16px) span(2 of 24) 0 0;
     @include susy-breakpoint($bp-medium, $columns-medium) {
-        display: none;
+        position: fixed;
+        top: rhythm(3, 16px);
+        height: 100%;
+        padding: 0;
+        @include translate3d(-200%, 0, 0);
+        @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
+        @include span(4 of 18);
+        @include background-image($content-gradient);
+        border-right: .1em solid rgba($black, .5);
     }
     @include susy-breakpoint($bp-small, $columns-small) {
-        display: none;
+        position: fixed;
+        top: rhythm(2.5, 16px);
+        height: 100%;
+        padding: 0;
+        @include translate3d(-100%, 0, 0);
+        @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
+        @include span(6 of 12);
+        @include background-image($content-gradient);
+        border-right: .1em solid rgba($black, .5);
     }
 }
 
@@ -24,8 +42,51 @@
     &:hover {
         color: $white;
     }
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        display: block;
+        text-align: left;
+        padding: rhythm(.75, 16px) span(2 of 18);
+        border-left: none;
+        border-bottom: .1em solid rgba($white, .5);
+    }
+    @include susy-breakpoint($bp-small, $columns-small) {
+        display: block;
+        text-align: left;
+        padding: rhythm(.75, 16px) span(2 of 12);
+        border-left: none;
+        border-bottom: .1em solid rgba($white, .5);
+    }
+}
+
+.current-menu-item {
+    color: $white;
 }
 
 .close-menu {
     display: none;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        display: block;
+        padding: rhythm(.75, 16px) span(2 of 12);
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+        text-align: left;
+        color: rgba($white, .5);
+        border-left: none;
+        border-bottom: .1em solid rgba($white, .5);
+    }
+    @include susy-breakpoint($bp-small, $columns-small) {
+        display: block;
+        padding: rhythm(.75, 16px) span(2 of 12);
+        -webkit-margin-before: 0;
+        -webkit-margin-after: 0;
+        text-align: left;
+        color: rgba($white, .5);
+        border-left: none;
+        border-bottom: .1em solid rgba($white, .5);
+    }
+}
+
+//AngularJS Mobile Behavior/Animation for Fly-in Menu
+.nav-menu.navmove {
+    @include translate3d(0%, 0, 0);
 }

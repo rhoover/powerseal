@@ -60,9 +60,9 @@
 
 
     <header class="header">
-        <p class="back-button">Back</p>
+        <p class="back-button" data-back-button>Back</p>
             <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="title"></a>
-        <p class="menu-button" ng-click="moveme='navmove' ">Menu</p>
+        <p class="menu-button" ng-click="moveme = 'navmove' ">Menu</p>
     </header><!-- end .header -->
 
     <?php

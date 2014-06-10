@@ -22,5 +22,6 @@
 
 <script src="/wp-content/themes/psv2/js/psv2/app.js"></script>
 <script src="/wp-content/themes/psv2/js/psv2/directives/responsive-trigger.js"></script>
+<script src="/wp-content/themes/psv2/js/psv2/directives/backbutton.js"></script>
 </body>
 </html>

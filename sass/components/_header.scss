@@ -35,7 +35,7 @@
         @include span(first 3 of 12);
         padding-top: rhythm(.25, 16px);
         padding-bottom: rhythm(.25, 16px);
-        margin: 0 gutters(1em);
+        margin: 0 0 0 gutters(1em);
         text-align: center;
         color: $white;
         border-radius: .25em;
@@ -76,10 +76,10 @@
     &:before {
             content: url('images/powerseal-logo-large.png');
             display: block;
-            text-align: center;
+            text-align: left;
     }
     @include susy-breakpoint($bp-medium, $columns-medium) {
-        @include span(10 of 18 no-gutters);
+        @include span(12 of 18 no-gutters);
         $height: image-height('images/powerseal-logo-medium.png');
         height: $height;
         &:before {
@@ -92,6 +92,7 @@
         @include span(5 of 12 no-gutters);
         $height: image-height('images/powerseal-logo-small.png');
         height: $height;
+        margin: 0 gutters(.65em);
         &:before {
             content: url('images/powerseal-logo-small.png');
             display: block;
