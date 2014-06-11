@@ -3,7 +3,7 @@
     @include span(24 of 24 no-gutters);
     @include clearfix;
     padding: rhythm(.5, 16px) span(2 of 24) 0 span(2 of 24);
-    background: $black;
+    background: rgba($black, .8);
     border-bottom: .1em solid darken($black, 10%);
     z-index: 40;
     @include susy-breakpoint($bp-medium, $columns-medium) {
@@ -93,7 +93,7 @@
         @include span(5 of 12 no-gutters);
         $height: image-height('images/powerseal-logo-small.png');
         height: $height;
-        margin: 0 gutters(.65em);
+        margin: rhythm(.35, 16px) gutters(.65em) 0 gutters(.65em);
         &:before {
             content: url('images/powerseal-logo-small.png');
             display: block;

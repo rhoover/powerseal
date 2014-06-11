@@ -10,11 +10,11 @@
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(18 of 18 no-gutters);
         margin-top: rhythm(-1, 16px);
-        padding: rhythm(1, 16px) span(2 of 18) 0 span(2 of 18);
+        padding: 0 span(2 of 18) 0 span(2 of 18);
     }
     @include susy-breakpoint($bp-small, $columns-small) {
         @include span(12 of 12 no-gutters);
         margin-top: rhythm(-4, 16px);
-        padding: rhythm(1, 16px) span(1 of 12) 0 span(1 of 12);
+        padding: 0 span(1 of 12) 0 span(1 of 12);
     }
 }
