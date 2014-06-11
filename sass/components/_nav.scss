@@ -8,25 +8,25 @@
     padding: rhythm(1.5, 16px) span(2 of 24) 0 0;
     @include susy-breakpoint($bp-medium, $columns-medium) {
         position: fixed;
-        top: rhythm(3, 16px);
+        top: rhythm(3.25, 16px);
         height: 100%;
         padding: 0;
         @include translate3d(-200%, 0, 0);
         @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
         @include span(4 of 18);
         @include background-image($content-gradient);
-        border-right: .1em solid rgba($black, .5);
+        border-right: .1em solid darken($black, 10%);
     }
     @include susy-breakpoint($bp-small, $columns-small) {
         position: fixed;
-        top: rhythm(2.5, 16px);
+        top: rhythm(2.55, 16px);
         height: 100%;
         padding: 0;
         @include translate3d(-100%, 0, 0);
         @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
         @include span(6 of 12);
         @include background-image($content-gradient);
-        border-right: .1em solid rgba($black, .5);
+        border-right: .1em solid darken($black, 10%);
     }
 }
 
