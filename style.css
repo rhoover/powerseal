@@ -35,7 +35,7 @@ html {
   top: 0px;
   left: -1000px;
 }
-@media (min-width: 37.5em) and (max-width: 64em) {
+@media (min-width: 37.5em) and (max-width: 74em) {
   .hero-banner:after {
     content: "tablet";
   }
@@ -131,7 +131,7 @@ body::after {
   border-bottom: 0.1em solid #141414;
   z-index: 40;
 }
-@media (min-width: 37.5em) and (max-width: 64em) {
+@media (min-width: 37.5em) and (max-width: 74em) {
   .header {
     width: 100%;
     float: left;
@@ -152,7 +152,7 @@ body::after {
 .back-button {
   display: none;
 }
-@media (min-width: 37.5em) and (max-width: 64em) {
+@media (min-width: 37.5em) and (max-width: 74em) {
   .back-button {
     display: inline-block;
     width: 16.6666667%;
@@ -189,7 +189,7 @@ body::after {
 .menu-button {
   display: none;
 }
-@media (min-width: 37.5em) and (max-width: 64em) {
+@media (min-width: 37.5em) and (max-width: 74em) {
   .menu-button {
     display: inline-block;
     width: 16.6666667%;
@@ -233,7 +233,7 @@ body::after {
   display: block;
   text-align: left;
 }
-@media (min-width: 37.5em) and (max-width: 64em) {
+@media (min-width: 37.5em) and (max-width: 74em) {
   .title {
     width: 66.6666667%;
     float: left;
@@ -270,7 +270,7 @@ body::after {
   z-index: 50;
   padding: 2.25em 8.3333333% 0 0;
 }
-@media (min-width: 37.5em) and (max-width: 64em) {
+@media (min-width: 37.5em) and (max-width: 74em) {
   .nav-menu {
     position: fixed;
     top: 4.875em;
@@ -330,7 +330,7 @@ body::after {
 .menu-item:hover {
   color: lightgray;
 }
-@media (min-width: 37.5em) and (max-width: 64em) {
+@media (min-width: 37.5em) and (max-width: 74em) {
   .menu-item {
     display: block;
     text-align: left;
@@ -356,7 +356,7 @@ body::after {
 .close-menu {
   display: none;
 }
-@media (min-width: 37.5em) and (max-width: 64em) {
+@media (min-width: 37.5em) and (max-width: 74em) {
   .close-menu {
     display: block;
     padding: 1.125em 16.6666667%;
@@ -401,7 +401,7 @@ body::after {
   color: lightgray;
   z-index: 20;
 }
-@media (min-width: 37.5em) and (max-width: 64em) {
+@media (min-width: 37.5em) and (max-width: 74em) {
   .site-content {
     width: 100%;
     float: left;
