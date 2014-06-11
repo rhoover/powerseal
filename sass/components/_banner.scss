@@ -4,7 +4,7 @@
 }
 
 .hero-banner.large {
-    position: absolute;
+    position: fixed;
     top: rhythm(4, 16px);
     @include span(24 of 24 no-gutters);
     @include clearfix;
@@ -15,7 +15,7 @@
 }
 
 .hero-banner.medium {
-    position: absolute;
+    position: fixed;
     top: rhythm(3, 16px);
     @include span(18 of 18 no-gutters);
     @include clearfix;
@@ -26,7 +26,7 @@
 }
 
 .hero-banner.small {
-    position: absolute;
+    position: fixed;
     top: rhythm(1.75, 16px);
     @include span(12 of 12 no-gutters);
     @include clearfix;

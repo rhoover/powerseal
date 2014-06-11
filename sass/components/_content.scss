@@ -1,0 +1,9 @@
+.site-content {
+    position: relative;
+    @include span(24 of 24 no-gutters);
+    @include clearfix;
+    margin-top: rhythm(17, 16px);
+    padding: rhythm(1, 16px) span(3 of 24) 0 span(3 of 24);
+    @include background-image($content-gradient);
+    z-index: 20;
+}

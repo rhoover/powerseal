@@ -5,6 +5,7 @@
     padding: rhythm(.5, 16px) span(2 of 24) 0 span(2 of 24);
     background: $black;
     border-bottom: .1em solid darken($black, 10%);
+    z-index: 40;
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(18 of 18);
         padding: rhythm(.75, 16px) span(1 of 18) 0 span(1 of 18);
