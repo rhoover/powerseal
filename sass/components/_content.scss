@@ -2,8 +2,8 @@
     position: relative;
     @include span(24 of 24 no-gutters);
     @include clearfix;
-    margin-top: rhythm(-6, 16px);
-    padding: rhythm(1, 16px) span(5 of 24) 0 span(5 of 24);
+    // margin-top: rhythm(-6, 16px);
+    padding: rhythm(1, 16px) span(6 of 24) 0 span(6 of 24);
     @include background-image($content-gradient);
     color: $white;
     z-index: 20;

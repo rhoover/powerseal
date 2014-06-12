@@ -17,6 +17,9 @@ angular.module('psv2App')
                     case "tablet" :
                         element.addClass("medium");
                     break;
+                    case "laptop" :
+                        element.addClass("medium-large");
+                    break;
                     case "computer" :
                         element.addClass("large");
                     break;

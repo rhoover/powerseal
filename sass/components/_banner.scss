@@ -6,7 +6,18 @@
 .hero-banner.large {
     @include span(24 of 24 no-gutters);
     @include clearfix;
-    height: image-height('images/powerseal-hero-large.jpg');
+    // height: image-height('images/powerseal-hero-large.jpg');
+    height: rhythm(18, 16px);
+    @include background-image(url('images/powerseal-hero-large.jpg'));
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.hero-banner.medium-large {
+    @include span(24 of 24 no-gutters);
+    @include clearfix;
+    // height: image-height('images/powerseal-hero-large.jpg');
+    height: rhythm(10, 16px);
     @include background-image(url('images/powerseal-hero-large.jpg'));
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -16,7 +27,6 @@
     @include span(18 of 18 no-gutters);
     @include clearfix;
     height: image-height('images/powerseal-hero-medium.jpg');
-    // margin-top: rhythm(2.5, 16px);
     background-image: url('images/powerseal-hero-medium.jpg');
     background-size: 100% auto;
     background-repeat: no-repeat;

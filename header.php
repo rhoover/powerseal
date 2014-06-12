@@ -84,4 +84,9 @@
         echo str_replace( $find, $replace, $cleanermenu );
     ?><!-- end .nav-menu -->
 
+    <div class="action">
+        <div class="button work-order">Download Work Order</div>
+        <div class="button dealer">Download Dealer Form</div>
+    </div>
+
     <div class="site-content">

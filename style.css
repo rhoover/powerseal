@@ -37,6 +37,11 @@ html {
 }
 @media (min-width: 37.5em) and (max-width: 74em) {
   .hero-banner:after {
+    content: "laptop";
+  }
+}
+@media (min-width: 37.5em) and (max-width: 64em) {
+  .hero-banner:after {
     content: "tablet";
   }
 }
@@ -91,7 +96,18 @@ body::after {
   float: left;
   overflow: hidden;
   *zoom: 1;
-  height: 600px;
+  height: 27em;
+  background-image: url("images/powerseal-hero-large.jpg");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.hero-banner.medium-large {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  *zoom: 1;
+  height: 15em;
   background-image: url("images/powerseal-hero-large.jpg");
   background-size: 100% auto;
   background-repeat: no-repeat;
@@ -131,7 +147,7 @@ body::after {
   border-bottom: 0.1em solid #141414;
   z-index: 40;
 }
-@media (min-width: 37.5em) and (max-width: 74em) {
+@media (min-width: 37.5em) and (max-width: 64em) {
   .header {
     width: 100%;
     float: left;
@@ -152,7 +168,7 @@ body::after {
 .back-button {
   display: none;
 }
-@media (min-width: 37.5em) and (max-width: 74em) {
+@media (min-width: 37.5em) and (max-width: 64em) {
   .back-button {
     display: inline-block;
     width: 16.6666667%;
@@ -189,7 +205,7 @@ body::after {
 .menu-button {
   display: none;
 }
-@media (min-width: 37.5em) and (max-width: 74em) {
+@media (min-width: 37.5em) and (max-width: 64em) {
   .menu-button {
     display: inline-block;
     width: 16.6666667%;
@@ -233,7 +249,7 @@ body::after {
   display: block;
   text-align: left;
 }
-@media (min-width: 37.5em) and (max-width: 74em) {
+@media (min-width: 37.5em) and (max-width: 64em) {
   .title {
     width: 66.6666667%;
     float: left;
@@ -270,7 +286,7 @@ body::after {
   z-index: 50;
   padding: 2.25em 8.3333333% 0 0;
 }
-@media (min-width: 37.5em) and (max-width: 74em) {
+@media (min-width: 37.5em) and (max-width: 64em) {
   .nav-menu {
     position: fixed;
     top: 4.875em;
@@ -330,7 +346,7 @@ body::after {
 .menu-item:hover {
   color: lightgray;
 }
-@media (min-width: 37.5em) and (max-width: 74em) {
+@media (min-width: 37.5em) and (max-width: 64em) {
   .menu-item {
     display: block;
     text-align: left;
@@ -356,7 +372,7 @@ body::after {
 .close-menu {
   display: none;
 }
-@media (min-width: 37.5em) and (max-width: 74em) {
+@media (min-width: 37.5em) and (max-width: 64em) {
   .close-menu {
     display: block;
     padding: 1.125em 16.6666667%;
@@ -387,21 +403,29 @@ body::after {
   transform: translate3d(0%, 0, 0);
 }
 
+.action {
+  width: 100%;
+  float: left;
+  overflow: hidden;
+  *zoom: 1;
+  min-height: 25px;
+  background-color: red;
+}
+
 .site-content {
   position: relative;
   width: 100%;
   float: left;
   overflow: hidden;
   *zoom: 1;
-  margin-top: -9em;
-  padding: 1.5em 20.8333333% 0 20.8333333%;
+  padding: 1.5em 25% 0 25%;
   background-image: -moz-linear-gradient(top, #2d2d2d 0%, #535353 100%);
   background-image: -webkit-linear-gradient(top, #2d2d2d 0%, #535353 100%);
   background-image: linear-gradient(to bottom, #2d2d2d 0%, #535353 100%);
   color: lightgray;
   z-index: 20;
 }
-@media (min-width: 37.5em) and (max-width: 74em) {
+@media (min-width: 37.5em) and (max-width: 64em) {
   .site-content {
     width: 100%;
     float: left;

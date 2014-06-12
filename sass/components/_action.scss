@@ -1,0 +1,6 @@
+.action {
+    @include span(24 of 24 no-gutters);
+    @include clearfix;
+    min-height: 25px;
+    background-color: red;
+}
