@@ -95,7 +95,7 @@
         @include span(5 of 12 no-gutters);
         $height: image-height('images/powerseal-logo-small.png');
         height: $height;
-        margin: rhythm(.35, 16px) gutters(.65em) 0 gutters(.65em);
+        margin: rhythm(.35, 16px) gutters(.35em) 0 gutters(.35em);
         &:before {
             content: url('images/powerseal-logo-small.png');
             display: block;
