@@ -1,14 +1,16 @@
 .action {
     @include span(24 of 24 no-gutters);
-    padding: rhythm(1.5, 16px) span(3 of 24);
     @include clearfix;
+    padding: rhythm(1.5, 16px) span(3 of 24);
     background-color: $black;
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(18 of 18 no-gutters);
+        padding: rhythm(1.5, 16px) span(2 of 18);
     }
     @include susy-breakpoint($bp-small, $columns-small) {
-        @include span(12 of 12 no-gutters);
         margin-top: rhythm(-4, 16px);
+        @include span(12 of 12 no-gutters);
+        padding: rhythm(1.5, 16px) span(1 of 12);
     }
     &-lede {
         color: $white;
