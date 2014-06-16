@@ -52,7 +52,7 @@
         }
         @include susy-breakpoint($bp-small, $columns-small) {
             &:before {
-                margin-left: -20%;
+                margin-left: -25%;
             }
         }
     }
@@ -84,7 +84,7 @@
         }
         @include susy-breakpoint($bp-small, $columns-small) {
             &:before {
-                margin-left: -20%;
+                margin-left: -25%;
             }
         }
     }

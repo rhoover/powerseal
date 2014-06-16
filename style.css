@@ -535,7 +535,7 @@ body::after {
 }
 @media (max-width: 37.5em) {
   .action-workorder:before {
-    margin-left: -20%;
+    margin-left: -25%;
   }
 }
 .action-contact {
@@ -585,7 +585,7 @@ body::after {
 }
 @media (max-width: 37.5em) {
   .action-dealer:before {
-    margin-left: -20%;
+    margin-left: -25%;
   }
 }
 
