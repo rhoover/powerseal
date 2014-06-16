@@ -1,6 +1,89 @@
 .action {
     @include span(24 of 24 no-gutters);
+    padding: rhythm(1.5, 16px) span(3 of 24);
     @include clearfix;
-    min-height: 25px;
-    background-color: red;
+    background-color: $black;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(18 of 18 no-gutters);
+    }
+    @include susy-breakpoint($bp-small, $columns-small) {
+        @include span(12 of 12 no-gutters);
+        margin-top: rhythm(-4, 16px);
+    }
+    &-lede {
+        color: $white;
+        text-align: center;
+        @extend %xlarge-font;
+        margin-top: 0;
+        opacity: .75;
+    }
+    &-button {
+        @include span(6 of 24);
+        margin: 0 span(1 of 24);
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            @include span(4 of 18);
+            margin: 0 span(1 of 18);
+            padding-top: rhythm(4, 16px);
+            padding-bottom: rhythm(4, 16px);
+            font-size: $small-font-size;
+        }
+        @include susy-breakpoint($bp-small, $columns-small) {
+            @include span(12 of 12 no-gutters);
+            margin: 0  0 rhythm(1, 16px) 0;
+        }
+    }
+    &-workorder {
+        position: relative;
+        @extend %action;
+        @include icon('before', true, 'icon-cloud-download');
+        &:before {
+            position: absolute;
+            width: 100%;
+            margin-left: -13%;
+            color: rgba($white, .15);
+            font-size: 138px;
+        }
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            &:before {
+                margin-left: -10%;
+            }
+        }
+        @include susy-breakpoint($bp-small, $columns-small) {
+            &:before {
+                margin-left: -20%;
+            }
+        }
+    }
+    &-contact {
+        position: relative;
+        @extend %action;
+        @include icon('before', true, 'icon-user');
+        &:before {
+            position: absolute;
+            color: rgba($white, .15);
+            font-size: 138px;
+        }
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            &:before {
+                margin-left: -9%;
+            }
+        }
+    }
+    &-dealer {
+        position: relative;
+        @extend %action;
+        @include icon('before', true, 'icon-cloud-download');
+        &:before {
+            position: absolute;
+            width: 100%;
+            margin-left: -13%;
+            color: rgba($white, .15);
+            font-size: 138px;
+        }
+        @include susy-breakpoint($bp-small, $columns-small) {
+            &:before {
+                margin-left: -20%;
+            }
+        }
+    }
 }

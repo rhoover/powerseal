@@ -11,9 +11,9 @@
         top: rhythm(3.25, 16px);
         height: 100%;
         padding: 0;
+        @include span(4 of 18 no-gutters);
         @include translate3d(-200%, 0, 0);
         @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
-        @include span(4 of 18);
         @include background-image($nav-gradient);
         border-right: .1em solid darken($black, 10%);
     }
@@ -22,9 +22,9 @@
         top: rhythm(2.55, 16px);
         height: 100%;
         padding: 0;
+        @include span(6 of 12 no-gutters);
         @include translate3d(-100%, 0, 0);
         @include transition(all 0.75s cubic-bezier(0.250, 0.460, 0.450, 0.940));
-        @include span(6 of 12);
         @include background-image($nav-gradient);
         border-right: .1em solid darken($black, 10%);
     }
@@ -66,23 +66,39 @@
     display: none;
     @include susy-breakpoint($bp-medium, $columns-medium) {
         display: block;
-        padding: rhythm(.75, 16px) span(2 of 12);
+        padding: rhythm(.75, 16px) span(2 of 18);
         -webkit-margin-before: 0;
         -webkit-margin-after: 0;
         text-align: left;
-        color: rgba($white, .5);
+        background-color: $black;
+        color: rgba($white, .75);
         border-left: none;
         border-bottom: .1em solid rgba($white, .5);
+        &:after {
+            content: 'X';
+            margin-left: span(3 of 18);
+            padding: .25em .45em;
+            border-radius: 100%;
+            border: .1em solid rgba($white, .75);
+        }
     }
     @include susy-breakpoint($bp-small, $columns-small) {
         display: block;
-        padding: rhythm(.75, 16px) span(2 of 12);
+        padding: rhythm(.75, 16px) 0 rhythm(.75, 16px) span(2 of 12);
         -webkit-margin-before: 0;
         -webkit-margin-after: 0;
         text-align: left;
+        background-color: $black;
         color: rgba($white, .5);
         border-left: none;
         border-bottom: .1em solid rgba($white, .5);
+        &:after {
+            content: "X";
+            margin-left: span(1 of 12);
+            padding: .25em .45em;
+            border-radius: 100%;
+            border: .1em solid rgba($white, .75);
+        }
     }
 }
 

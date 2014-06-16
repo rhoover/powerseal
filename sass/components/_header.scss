@@ -13,7 +13,7 @@
     @include susy-breakpoint($bp-small, $columns-small) {
         @include span(12 of 12 no-gutters);
         padding: rhythm(.5, 16px) 0 rhythm(.5, 16px) 0;
-        background: lighten($black, 5%);
+        background: lighten($black, 45%);
     }
 }
 
@@ -39,8 +39,9 @@
         margin: 0 0 0 gutters(1em);
         text-align: center;
         color: $white;
+        background-color: rgba($black, .5);
         border-radius: .25em;
-        border: .1em solid rgba($white, .5);
+        border: .1em solid rgba($black, .95);
     }
 }
 
@@ -66,8 +67,9 @@
         margin: 0 gutters(1em) 0 0;
         text-align: center;
         color: $white;
+        background-color: rgba($black, .5);
         border-radius: .25em;
-        border: .1em solid rgba($white, .5);
+        border: .1em solid rgba($black, .95);
     }
 }
 

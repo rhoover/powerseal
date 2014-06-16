@@ -1,0 +1,45 @@
+// Courtesy: http://jaydenseric.com/blog/fun-with-sass-and-font-icons
+$icons: (
+    'icon-pencil' '\e600',
+    'icon-phone' '\e601',
+    'icon-envelope' '\e602',
+    'icon-user' '\e603',
+    'icon-cloud-download' '\e604'
+);
+@function match($haystack, $needle) {
+    @each $item in $haystack {
+        $index: index($item, $needle);
+        @if $index {
+            $return: if($index == 1, 2, $index);
+            @return nth($item, $return);
+        }
+    }
+    @return false;
+}
+@mixin icon($position: 'before', $styles: true, $icon: false) {
+    // Either a :before or :after pseudo-element, defaulting to :before
+    &:#{$position} {
+        @if $icon {
+            // Icon has been specified
+            content: match($icons, $icon);
+        }
+        @if $styles {
+            // Supportive icon styles have been specified
+            font: {
+                style: normal;
+                variant: normal;
+                weight: normal;
+                family: $psv2;
+            }
+            // @include adjust-font-size-to(14px);
+            // padding-right: $grid-padding/2;
+            // @include adjust-font-size-to(25px);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-transform: none;
+            speak: none;
+        }
+        // Include any extra rules supplied for the pseudo-element
+        @content;
+    }
+}

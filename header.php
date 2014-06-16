@@ -61,7 +61,7 @@
 
     <header class="header">
         <p class="back-button" data-back-button>Back</p>
-            <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="title"></a>
+        <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="title"></a>
         <p class="menu-button" ng-click="moveme = 'navmove' ">Menu</p>
     </header><!-- end .header -->
 
@@ -85,8 +85,10 @@
     ?><!-- end .nav-menu -->
 
     <div class="action">
-        <div class="button work-order">Download Work Order</div>
-        <div class="button dealer">Download Dealer Form</div>
+        <h2 class="action-lede">Your Performance Plating Headquarters for NikaSeal Plating and Cylinder Repair</h2>
+        <a href="#" class="action-button action-workorder">Download Work Order</a>
+        <a href="#" class="action-button action-contact">Contact Information</a>
+        <a href="#" class="action-button action-dealer">Download Dealer Form</a>
     </div>
 
-    <div class="site-content">
+    <div class="content">

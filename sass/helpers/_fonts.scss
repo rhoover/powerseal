@@ -1,0 +1,6 @@
+@include font-face('PSV2', font-files(
+    'psv2.woff',woff,
+    'psv2.ttf', ttf,
+    'psv2.svg', svg),
+    'psv2.eot');
+    $psv2: 'psv2', arial, sans-serif;

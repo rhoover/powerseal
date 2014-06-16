@@ -16,3 +16,17 @@
         }
     }
 }
+
+%action {
+    @include transition(border 0.3s ease-in, box-shadow 0.3s ease-in);
+    padding: rhythm(3, 16px) 0;
+    text-align: center;
+    color: $white;
+    text-decoration: none;
+    border: .1em solid rgba($white, .1);
+    border-radius: 1em;
+    &:hover {
+        border: .1em solid rgba($white, .75);
+            @include box-shadow(0px 0px 7px 3px rgba($white, .5));
+    }
+}
