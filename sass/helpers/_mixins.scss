@@ -3,8 +3,8 @@ $icons: (
     'icon-pencil' '\e600',
     'icon-phone' '\e601',
     'icon-envelope' '\e602',
-    'icon-user' '\e603',
-    'icon-cloud-download' '\e604'
+    'icon-feed' '\e603',
+    'icon-download' '\e604'
 );
 @function match($haystack, $needle) {
     @each $item in $haystack {

@@ -41,8 +41,8 @@ html {
 
 @font-face {
   font-family: "PSV2";
-  src: url('fonts/psv2.eot?1402929696');
-  src: url('fonts/psv2.eot?&1402929696#iefix') format('embedded-opentype'), url('fonts/psv2.woff?1402929696') format('woff'), url('fonts/psv2.ttf?1402929696') format('truetype'), url('fonts/psv2.svg?1402929696') format('svg');
+  src: url('fonts/powersealusa.eot?1403130670');
+  src: url('fonts/powersealusa.eot?&1403130670#iefix') format('embedded-opentype'), url('fonts/powersealusa.woff?1403130670') format('woff'), url('fonts/powersealusa.ttf?1403130670') format('truetype'), url('fonts/powersealusa.svg?1403130670') format('svg');
 }
 .hero-banner:after {
   content: "computer";

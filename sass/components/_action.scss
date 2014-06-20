@@ -37,7 +37,7 @@
     &-workorder {
         position: relative;
         @extend %action;
-        @include icon('before', true, 'icon-cloud-download');
+        @include icon('before', true, 'icon-download');
         &:before {
             position: absolute;
             width: 100%;
@@ -59,7 +59,7 @@
     &-contact {
         position: relative;
         @extend %action;
-        @include icon('before', true, 'icon-user');
+        @include icon('before', true, 'icon-feed');
         &:before {
             position: absolute;
             color: rgba($white, .15);
@@ -74,7 +74,7 @@
     &-dealer {
         position: relative;
         @extend %action;
-        @include icon('before', true, 'icon-cloud-download');
+        @include icon('before', true, 'icon-download');
         &:before {
             position: absolute;
             width: 100%;
