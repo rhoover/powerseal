@@ -23,10 +23,10 @@
     text-align: center;
     color: $white;
     text-decoration: none;
-    border: .1em solid rgba($white, .1);
+    border: .1em solid rgba($white, .05);
     border-radius: 1em;
     &:hover {
-        border: .1em solid rgba($white, .75);
-            @include box-shadow(0px 0px 7px 3px rgba($white, .5));
+        border: .1em solid rgba($white, .5);
+            @include box-shadow(0px 0px 7px 3px rgba($white, .3));
     }
 }

@@ -25,22 +25,23 @@
 
 <!-- apple stuff -->
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="Vermont Brewers">
+<meta name="apple-mobile-web-app-title" content="PowerSealUSA">
 <meta name='apple-touch-fullscreen' content='yes'>
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 
 <!-- because microsoft exists -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="msapplication-TileImage" content="images/apple-touch-icon-144x144-precomposed.png">
+<meta name="msapplication-TileImage" content="images/apple-touch-icon-144x144.png">
 <meta name="msapplication-TileColor" content="#222222">
 <meta http-equiv="cleartype" content="on">
 
-<!-- icons -->
+<!-- icons and Launch Image -->
 <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
 <link rel="apple-touch-icon" sizes="144x144" href="images/apple-touch-icon-144x144.png">
 <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
 <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
 <link rel="apple-touch-icon" sizes="57x57" href="images/apple-touch-icon-57x57.png">
+<link rel="apple-touch-startup-image" href="images/startup.png">
 
 <!-- icon actually for android -->
 <link rel="apple-touch-icon" href="images/apple-touch-icon-57x57.png">
@@ -85,9 +86,9 @@
     ?><!-- end .nav-menu -->
 
     <div class="action">
-        <h2 class="action-lede">Your Performance Plating Headquarters for NikaSeal Plating and Cylinder Repair</h2>
+        <h2 class="action-lede">Your Performance Headquarters for NikaSeal Cylinder Plating and Repair</h2>
         <a href="#" class="action-button action-workorder">Download Work Order</a>
-        <a href="#" class="action-button action-contact">Contact Information</a>
+        <a href="http://powersealv2/?page_id=16" class="action-button action-contact">Contact Information</a>
         <a href="#" class="action-button action-dealer">Download Dealer Form</a>
     </div>
 

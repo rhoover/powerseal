@@ -11,7 +11,7 @@
 </div><!-- end .site-content -->
 
 <footer class="footer" >
-    <p class="footer-content">&copy; <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+    <p class="footer-content">&copy;<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home" class="footer-content-link"><?php bloginfo( 'name' ); ?></a></p>
 </footer><!-- end .footer -->
 
 <?php wp_footer(); ?>

@@ -4,5 +4,7 @@ $black-dark: darken($black, 15%);
 
 $white: lighten($black, 65%);
 
+$cyan: darken(cyan, 15%);
+
 $content-gradient: linear-gradient(top, $black 0%, $black-lite 100%);
 $nav-gradient: linear-gradient(top, rgba($black, .9) 0%, rgba($black-lite, .9) 100%);

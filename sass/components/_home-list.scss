@@ -1,0 +1,10 @@
+.home-list {
+    li {
+        @extend %base-font;
+        margin-bottom: rhythm(1, 16px);
+        a {
+            color: $white;
+            font-weight: 700;
+        }
+    }
+}

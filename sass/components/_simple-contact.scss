@@ -1,0 +1,87 @@
+.contact {
+    &-header {
+        padding: rhythm(.5, 16px) 0;
+        border-top: .1em solid rgba($white, .5);
+        border-bottom: .1em solid rgba($white, .5);
+    }
+    &-telephone {
+        color: $white;
+        text-decoration: none;
+        @include susy-breakpoint($bp-small, $columns-small) {
+            padding: rhythm(.5, 16px);
+            border: .1em solid rgba($white, .5);
+            border-radius: .25em;
+        }
+    }
+}
+
+#simple-contact-form {
+    @include span(24 of 24);
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        @include span(18 of 18);
+    }
+    @include susy-breakpoint($bp-small, $columns-small) {
+        @include span(12 of 12);
+    }
+}
+.scf {
+    &-name {
+        border: none;
+        @include span(24 of 24);
+        margin: 0 0 rhythm(1, 16px) 0;
+        padding: rhythm(.25, 16px) 0;
+        @include susy-breakpoint($bp-medium, $columns-medium) {
+            @include span(18 of 18);
+        }
+        @include susy-breakpoint($bp-small, $columns-small) {
+            @include span(12 of 12);
+        }
+        label {
+            float: left;
+            padding-right: span(1);
+            line-height: 1.8;
+        }
+        input {
+            float: right;
+            line-height: 2em;
+            &:active {
+                border: .2em solid $cyan;
+            }
+            &:focus {
+                border: .2em solid $cyan;
+            }
+        }
+    }
+    &-email {
+        @extend .scf-name;
+    }
+    &-response {
+        @extend .scf-name;
+    }
+    &-message {
+        @extend .scf-name;
+        textarea {
+            float: right;
+            &:active {
+                border: .2em solid $cyan;
+            }
+            &:focus {
+                border: .2em solid $cyan;
+            }
+        }
+    }
+    &-submit {
+        margin-bottom: rhythm(3, 16px);
+        #scf_contact {
+            padding: rhythm(.5, 16px);
+            background: transparent;
+            border: .1em solid rgba($white, .5);
+            border-radius: .25em;
+            color: $white;
+            &:hover {
+                border: .1em solid rgba($white, .5);
+                    @include box-shadow(0px 0px 7px 3px rgba($white, .3));
+            }
+        }
+    }
+}

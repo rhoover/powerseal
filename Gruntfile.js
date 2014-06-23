@@ -72,8 +72,9 @@ module.exports = function (grunt) {
                         // 'style.css',
                         // 'js/libraries/angular/angular.min.js',
                         'fonts/*',
-                        'images/*',
-                        'data/*'
+                        'images/*.png',
+                        'images/*.jpg',
+                        'images/*.ico'
                     ]
                 }]
             }
