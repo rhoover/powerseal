@@ -52,8 +52,8 @@ html {
 
 @font-face {
   font-family: "PSV2";
-  src: url('fonts/powersealusa.eot?1403130670');
-  src: url('fonts/powersealusa.eot?&1403130670#iefix') format('embedded-opentype'), url('fonts/powersealusa.woff?1403130670') format('woff'), url('fonts/powersealusa.ttf?1403130670') format('truetype'), url('fonts/powersealusa.svg?1403130670') format('svg');
+  src: url('fonts/powersealusa.eot?1403605996');
+  src: url('fonts/powersealusa.eot?&1403605996#iefix') format('embedded-opentype'), url('fonts/powersealusa.woff?1403605996') format('woff'), url('fonts/powersealusa.ttf?1403605996') format('truetype'), url('fonts/powersealusa.svg?1403605996') format('svg');
 }
 .hero-banner:after {
   content: "computer";
@@ -95,6 +95,33 @@ html {
   -moz-box-shadow: 0px 0px 7px 3px rgba(211, 211, 211, 0.3);
   -webkit-box-shadow: 0px 0px 7px 3px rgba(211, 211, 211, 0.3);
   box-shadow: 0px 0px 7px 3px rgba(211, 211, 211, 0.3);
+}
+
+.back-button, .menu-button {
+  display: none;
+}
+@media (min-width: 37.5em) and (max-width: 64em) {
+  .back-button, .menu-button {
+    display: inline-block;
+    padding-top: 0.375em;
+    padding-bottom: 0.375em;
+    text-align: center;
+    color: lightgray;
+    border-radius: .25em;
+    border: 0.1em solid rgba(211, 211, 211, 0.5);
+  }
+}
+@media (max-width: 37.5em) {
+  .back-button, .menu-button {
+    display: inline-block;
+    padding-top: 0.375em;
+    padding-bottom: 0.375em;
+    text-align: center;
+    color: lightgray;
+    background-color: rgba(45, 45, 45, 0.5);
+    border-radius: .25em;
+    border: 0.1em solid rgba(45, 45, 45, 0.95);
+  }
 }
 
 .alignleft {
@@ -211,79 +238,41 @@ body::after {
   }
 }
 
-.back-button {
-  display: none;
-}
 @media (min-width: 37.5em) and (max-width: 64em) {
   .back-button {
-    display: inline-block;
     width: 16.6666667%;
     float: left;
     padding-left: 0.642668%;
     padding-right: 0.642668%;
-    padding-top: 0.375em;
-    padding-bottom: 0.375em;
-    -webkit-margin-before: 0;
     margin: 0 0 1.5em 0;
-    text-align: center;
-    color: lightgray;
-    border-radius: .25em;
-    border: 0.1em solid rgba(211, 211, 211, 0.5);
   }
 }
 @media (max-width: 37.5em) {
   .back-button {
-    display: inline-block;
     width: 25%;
     float: left;
     padding-left: 0.964002%;
     padding-right: 0.964002%;
-    padding-top: 0.375em;
-    padding-bottom: 0.375em;
     margin: 0 0 0 0.5em;
-    text-align: center;
-    color: lightgray;
-    background-color: rgba(45, 45, 45, 0.5);
-    border-radius: .25em;
-    border: 0.1em solid rgba(45, 45, 45, 0.95);
   }
 }
 
-.menu-button {
-  display: none;
-}
 @media (min-width: 37.5em) and (max-width: 64em) {
   .menu-button {
-    display: inline-block;
     width: 16.6666667%;
     float: right;
     padding-left: 0.642668%;
     padding-right: 0.642668%;
-    padding-top: 0.375em;
-    padding-bottom: 0.375em;
-    -webkit-margin-before: 0;
     margin: 0 0 1.5em 0;
-    text-align: center;
-    color: lightgray;
-    border-radius: .25em;
-    border: 0.1em solid rgba(211, 211, 211, 0.5);
   }
 }
 @media (max-width: 37.5em) {
   .menu-button {
-    display: inline-block;
     width: 25%;
     float: right;
     padding-left: 0.964002%;
     padding-right: 0.964002%;
-    padding-top: 0.375em;
-    padding-bottom: 0.375em;
     margin: 0 0.5em 0 0;
-    text-align: center;
-    color: lightgray;
-    background-color: rgba(45, 45, 45, 0.5);
-    border-radius: .25em;
-    border: 0.1em solid rgba(45, 45, 45, 0.95);
   }
 }
 

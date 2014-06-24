@@ -23,12 +23,25 @@ module.exports = function (grunt) {
             }
         },
 
+        // ngmin tries to make the code safe for minification automatically by
+        // using the Angular long form for dependency injection. It doesn't work on
+        // things like resolve or inject so those have to be done manually.
+        ngmin: {
+          dist: {
+            files: [{
+              expand: true,
+              cwd: '<%=psv2.jsCustom %>',
+              src: '*.js',
+              dest: '.tmp/concat/scripts'
+            }]
+          }
+        },
         //
         //let's all join together
         //
-        concat: {
-            psv2: {
-                src: [
+        // concat: {
+        //     psv2: {
+        //         src: [
                     // '<%=psv2.jsCustom %>/app.js',
                     // '<%=psv2.jsCustom %>/services/memberjson.js',
                     // '<%=psv2.jsCustom %>/services/storageservice.js',
@@ -43,18 +56,18 @@ module.exports = function (grunt) {
                     // '<%=psv2.jsCustom %>/directives/membermap.js',
                     // '<%=psv2.jsCustom %>/directives/allmembermap.js',
                     // '<%=psv2.jsCustom %>/directives/menumover.js'
-                ],
-                dest: '<%=psv2.production %>/js/psv2/psv2.min.js'
-            },
-            angular: {
-                src: [
-                '<%=psv2.jsLibraries %>/angular/angular.min.js',
-                '<%=psv2.jsLibraries %>/angular-animate/angular-animate.min.js',
-                '<%=psv2.jsLibraries %>/angular-touch/angular-touch.min.js'
-                ],
-                dest: '<%=psv2.production %>/js/libraries/all-angular.min.js'
-            }
-        },
+        //         ],
+        //         dest: '<%=psv2.production %>/js/psv2/psv2.min.js'
+        //     },
+        //     angular: {
+        //         src: [
+        //         '<%=psv2.jsLibraries %>/angular/angular.min.js',
+        //         '<%=psv2.jsLibraries %>/angular-animate/angular-animate.min.js',
+        //         '<%=psv2.jsLibraries %>/angular-touch/angular-touch.min.js'
+        //         ],
+        //         dest: '<%=psv2.production %>/js/libraries/all-angular.min.js'
+        //     }
+        // },
 
         //
         // Copy files not handled in other tasks
@@ -83,25 +96,23 @@ module.exports = function (grunt) {
         //
         //Minify the CSS
         //
-        cssmin: {
-            minify: {
-                expand: true,
-                src: ['*.css', '!*.min.css'],
-                dest: '<%=psv2.production %>'
-            }
-        },
+        // cssmin: {
+        //     minify: {
+        //         expand: true,
+        //         src: ['*.css', '!*.min.css'],
+        //         dest: '<%=psv2.production %>'
+        //     }
+        // },
 
         //
         //Revision the files
         //
-        rev: {
-            assets: {
-                files: [{
-                    src: [
-                    '<%=psv2.production %>/js/psv2/{,*/}*.js',
-                    '<%=psv2.production %>/js/libraries/{,*/}*.js'
-                    ]
-                }]
+        filerev: {
+            dist: {
+                src: [
+                '<%=psv2.production %>/js/psv2/{,*/}*.js',
+                '<%=psv2.production %>/js/libraries/{,*/}*.js'
+                ]
             }
         }
 
@@ -112,11 +123,18 @@ module.exports = function (grunt) {
     //
     grunt.registerTask('build', [
         'clean:production',
-        'concat:psv2',
-        'concat:angular',
+        'ngmin',
+        'useminPrepare',
+        'concat',
+        'cssmin',
+        'uglify',
+        'filerev',
+        'usemin',
+        // 'concat:psv2',
+        // 'concat:angular',
         'copy:production',
-         'cssmin:minify',
-         'rev'
+         // 'cssmin:minify',
+         // 'rev'
      ]);
 
 

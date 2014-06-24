@@ -30,3 +30,26 @@
             @include box-shadow(0px 0px 7px 3px rgba($white, .3));
     }
 }
+
+%nav-buttons {
+    display: none;
+    @include susy-breakpoint($bp-medium, $columns-medium) {
+        display: inline-block;
+        padding-top: rhythm(.25, 16px);
+        padding-bottom: rhythm(.25, 16px);
+        text-align: center;
+        color: $white;
+        border-radius: .25em;
+        border: .1em solid rgba($white, .5);
+    }
+    @include susy-breakpoint($bp-small, $columns-small) {
+        display: inline-block;
+        padding-top: rhythm(.25, 16px);
+        padding-bottom: rhythm(.25, 16px);
+        text-align: center;
+        color: $white;
+        background-color: rgba($black, .5);
+        border-radius: .25em;
+        border: .1em solid rgba($black, .95);
+    }
+}

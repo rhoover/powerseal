@@ -88,7 +88,7 @@
     <div class="action">
         <h2 class="action-lede">Your Performance Headquarters for NikaSeal Cylinder Plating and Repair</h2>
         <a href="#" class="action-button action-workorder">Download Work Order</a>
-        <a href="http://powersealv2/?page_id=16" class="action-button action-contact">Contact Information</a>
+        <a href="http://ec2-54-86-240-234.compute-1.amazonaws.com/?page_id=13" class="action-button action-contact">Contact Information</a>
         <a href="#" class="action-button action-dealer">Download Dealer Form</a>
     </div>
 

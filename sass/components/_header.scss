@@ -18,58 +18,26 @@
 }
 
 .back-button {
-    display: none;
+    @extend %nav-buttons;
     @include susy-breakpoint($bp-medium, $columns-medium) {
-        display: inline-block;
         @include span(first 3 of 18);
-        padding-top: rhythm(.25, 16px);
-        padding-bottom: rhythm(.25, 16px);
-        -webkit-margin-before: 0;
         margin: 0 0 rhythm(1, 16px) 0;
-        text-align: center;
-        color: $white;
-        border-radius: .25em;
-        border: .1em solid rgba($white, .5);
     }
     @include susy-breakpoint($bp-small, $columns-small) {
-        display: inline-block;
         @include span(first 3 of 12);
-        padding-top: rhythm(.25, 16px);
-        padding-bottom: rhythm(.25, 16px);
         margin: 0 0 0 gutters(1em);
-        text-align: center;
-        color: $white;
-        background-color: rgba($black, .5);
-        border-radius: .25em;
-        border: .1em solid rgba($black, .95);
     }
 }
 
 .menu-button {
-    display: none;
+    @extend %nav-buttons;
     @include susy-breakpoint($bp-medium, $columns-medium) {
-        display: inline-block;
         @include span(last 3 of 18);
-        padding-top: rhythm(.25, 16px);
-        padding-bottom: rhythm(.25, 16px);
-        -webkit-margin-before: 0;
         margin: 0 0 rhythm(1, 16px) 0;
-        text-align: center;
-        color: $white;
-        border-radius: .25em;
-        border: .1em solid rgba($white, .5);
     }
     @include susy-breakpoint($bp-small, $columns-small) {
-        display: inline-block;
         @include span(last 3 of 12);
-        padding-top: rhythm(.25, 16px);
-        padding-bottom: rhythm(.25, 16px);
         margin: 0 gutters(1em) 0 0;
-        text-align: center;
-        color: $white;
-        background-color: rgba($black, .5);
-        border-radius: .25em;
-        border: .1em solid rgba($black, .95);
     }
 }
 

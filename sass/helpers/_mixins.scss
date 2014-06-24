@@ -4,7 +4,10 @@ $icons: (
     'icon-phone' '\e601',
     'icon-envelope' '\e602',
     'icon-feed' '\e603',
-    'icon-download' '\e604'
+    'icon-download' '\e604',
+    'icon-coin' '\e605',
+    'icon-print' '\e606',
+    'icon-question' '\e607'
 );
 @function match($haystack, $needle) {
     @each $item in $haystack {
