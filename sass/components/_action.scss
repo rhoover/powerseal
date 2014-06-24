@@ -27,7 +27,6 @@
             margin: 0 span(1 of 18);
             padding-top: rhythm(4, 16px);
             padding-bottom: rhythm(4, 16px);
-            font-size: $small-font-size;
         }
         @include susy-breakpoint($bp-small, $columns-small) {
             @include span(12 of 12 no-gutters);
@@ -35,72 +34,15 @@
         }
     }
     &-workorder {
-        position: relative;
         @extend %action;
         @include icon('before', true, 'icon-download');
-        &:before {
-            position: absolute;
-            width: 100%;
-            margin-left: -25%;
-            color: rgba($white, .15);
-            font-size: 138px;
-        }
-        @include susy-breakpoint($bp-medium-large, $columns-medium-large) {
-            &:before {
-                margin-left: -13%;
-            }
-        }
-        @include susy-breakpoint($bp-medium, $columns-medium) {
-            &:before {
-                margin-left: -10%;
-            }
-        }
-        @include susy-breakpoint($bp-small, $columns-small) {
-            &:before {
-                margin-left: -25%;
-            }
-        }
     }
-    &-contact {
-        position: relative;
+    &-faq {
         @extend %action;
-        @include icon('before', true, 'icon-feed');
-        &:before {
-            position: absolute;
-            color: rgba($white, .15);
-            font-size: 138px;
-        }
-        @include susy-breakpoint($bp-medium, $columns-medium) {
-            &:before {
-                margin-left: -9%;
-            }
-        }
+        @include icon('before', true, 'icon-question');
     }
-    &-dealer {
-        position: relative;
+    &-prices {
         @extend %action;
-        @include icon('before', true, 'icon-download');
-        &:before {
-            position: absolute;
-            width: 100%;
-            margin-left: -25%;
-            color: rgba($white, .15);
-            font-size: 138px;
-        }
-        @include susy-breakpoint($bp-medium-large, $columns-medium-large) {
-            &:before {
-                margin-left: -13%;
-            }
-        }
-        @include susy-breakpoint($bp-medium, $columns-medium) {
-            &:before {
-                margin-left: -10%;
-            }
-        }
-        @include susy-breakpoint($bp-small, $columns-small) {
-            &:before {
-                margin-left: -25%;
-            }
-        }
+        @include icon('before', true, 'icon-coin');
     }
 }

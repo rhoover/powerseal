@@ -78,19 +78,29 @@ html {
   }
 }
 
-.action-workorder, .action-contact, .action-dealer {
+.action-workorder, .action-faq, .action-prices {
+  position: relative;
   -moz-transition: border 0.3s ease-in, box-shadow 0.3s ease-in;
   -o-transition: border 0.3s ease-in, box-shadow 0.3s ease-in;
   -webkit-transition: border 0.3s ease-in, box-shadow 0.3s ease-in;
   transition: border 0.3s ease-in, box-shadow 0.3s ease-in;
-  padding: 4.5em 0;
+  line-height: 11.25em;
   text-align: center;
   color: lightgray;
   text-decoration: none;
   border: 0.1em solid rgba(211, 211, 211, 0.05);
   border-radius: 1em;
 }
-.action-workorder:hover, .action-contact:hover, .action-dealer:hover {
+.action-workorder:before, .action-faq:before, .action-prices:before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: rgba(211, 211, 211, 0.15);
+  font-size: 138px;
+}
+.action-workorder:hover, .action-faq:hover, .action-prices:hover {
   border: 0.1em solid rgba(211, 211, 211, 0.5);
   -moz-box-shadow: 0px 0px 7px 3px rgba(211, 211, 211, 0.3);
   -webkit-box-shadow: 0px 0px 7px 3px rgba(211, 211, 211, 0.3);
@@ -497,7 +507,6 @@ body::after {
     margin: 0 5.5555556%;
     padding-top: 6em;
     padding-bottom: 6em;
-    font-size: 12px;
   }
 }
 @media (max-width: 37.5em) {
@@ -507,9 +516,6 @@ body::after {
     margin: 0 0 1.5em 0;
   }
 }
-.action-workorder {
-  position: relative;
-}
 .action-workorder:before {
   content: "\e604";
   font-style: normal;
@@ -521,33 +527,8 @@ body::after {
   text-transform: none;
   speak: none;
 }
-.action-workorder:before {
-  position: absolute;
-  width: 100%;
-  margin-left: -25%;
-  color: rgba(211, 211, 211, 0.15);
-  font-size: 138px;
-}
-@media (min-width: 37.5em) and (max-width: 74em) {
-  .action-workorder:before {
-    margin-left: -13%;
-  }
-}
-@media (min-width: 37.5em) and (max-width: 64em) {
-  .action-workorder:before {
-    margin-left: -10%;
-  }
-}
-@media (max-width: 37.5em) {
-  .action-workorder:before {
-    margin-left: -25%;
-  }
-}
-.action-contact {
-  position: relative;
-}
-.action-contact:before {
-  content: "\e603";
+.action-faq:before {
+  content: "\e607";
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -557,21 +538,8 @@ body::after {
   text-transform: none;
   speak: none;
 }
-.action-contact:before {
-  position: absolute;
-  color: rgba(211, 211, 211, 0.15);
-  font-size: 138px;
-}
-@media (min-width: 37.5em) and (max-width: 64em) {
-  .action-contact:before {
-    margin-left: -9%;
-  }
-}
-.action-dealer {
-  position: relative;
-}
-.action-dealer:before {
-  content: "\e604";
+.action-prices:before {
+  content: "\e605";
   font-style: normal;
   font-variant: normal;
   font-weight: normal;
@@ -580,28 +548,6 @@ body::after {
   -moz-osx-font-smoothing: grayscale;
   text-transform: none;
   speak: none;
-}
-.action-dealer:before {
-  position: absolute;
-  width: 100%;
-  margin-left: -25%;
-  color: rgba(211, 211, 211, 0.15);
-  font-size: 138px;
-}
-@media (min-width: 37.5em) and (max-width: 74em) {
-  .action-dealer:before {
-    margin-left: -13%;
-  }
-}
-@media (min-width: 37.5em) and (max-width: 64em) {
-  .action-dealer:before {
-    margin-left: -10%;
-  }
-}
-@media (max-width: 37.5em) {
-  .action-dealer:before {
-    margin-left: -25%;
-  }
 }
 
 .content {
