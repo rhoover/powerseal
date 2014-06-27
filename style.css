@@ -22,23 +22,23 @@ html {
   line-height: 1.5em;
 }
 
-.home-list li {
+.content p, .home-list li {
   font-size: 1em;
   line-height: 1.5em;
 }
 @media (min-width: 37.5em) and (max-width: 64em) {
-  .home-list li {
+  .content p, .home-list li {
     font-size: 1em;
     line-height: 1.5em;
   }
 }
 
-.action-lede {
+.action-lede, .entry-title {
   font-size: 1.75em;
   line-height: 1.5231429em;
 }
 @media (min-width: 37.5em) and (max-width: 64em) {
-  .action-lede {
+  .action-lede, .entry-title {
     font-size: 2.375em;
     line-height: 1.4962105em;
   }
@@ -227,7 +227,7 @@ body::after {
   *zoom: 1;
   padding: 0.75em 8.3333333% 0 8.3333333%;
   background: rgba(45, 45, 45, 0.8);
-  border-bottom: 0.1em solid #141414;
+  border-bottom: 0.1em solid rgba(5, 79, 163, 0.75);
   z-index: 40;
 }
 @media (min-width: 37.5em) and (max-width: 64em) {
@@ -469,6 +469,7 @@ body::after {
   *zoom: 1;
   padding: 2.25em 12.5%;
   background-color: #2d2d2d;
+  border-top: 0.1em solid rgba(5, 79, 163, 0.75);
 }
 @media (min-width: 37.5em) and (max-width: 64em) {
   .action {
@@ -486,9 +487,12 @@ body::after {
   }
 }
 .action-lede {
-  color: lightgray;
-  text-align: center;
   margin-top: 0;
+  text-align: center;
+  color: lightgray;
+  text-shadow: 0 0 0 black;
+  filter: progid:DXImageTransform.Microsoft.Glow(Color=black,Strength=1);
+  /* IE<10 */
   opacity: .75;
 }
 .action-button {
@@ -578,17 +582,26 @@ body::after {
     padding: 0 8.3333333% 0 8.3333333%;
   }
 }
+.content p strong {
+  text-decoration: underline;
+}
+.content a {
+  color: rgba(0, 178, 179, 0.75);
+  font-weight: 700;
+}
+.content a:hover {
+  color: #00b2b3;
+}
 
 .entry-title {
   margin-bottom: 3em;
+  padding: 0.375em 0;
+  border-top: solid rgba(211, 211, 211, 0.75) 0.01em;
+  border-bottom: solid rgba(211, 211, 211, 0.75) 0.01em;
 }
 
 .home-list li {
   margin-bottom: 1.5em;
-}
-.home-list li a {
-  color: lightgray;
-  font-weight: 700;
 }
 
 .contact-header {
@@ -704,7 +717,7 @@ body::after {
   *zoom: 1;
   padding: 0 8.3333333%;
   background: rgba(45, 45, 45, 0.8);
-  border-top: 0.1em solid #141414;
+  border-top: 0.1em solid rgba(5, 79, 163, 0.75);
 }
 .footer-content {
   color: rgba(211, 211, 211, 0.75);

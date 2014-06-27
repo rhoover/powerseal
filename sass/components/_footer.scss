@@ -3,11 +3,10 @@
     @include clearfix;
     padding: 0 span(2 of 24);
     background: rgba($black, .8);
-    border-top: .1em solid darken($black, 10%);
+    border-top: .1em solid rgba($blue, .75);
     &-content {
         color: rgba($white, .75);
         &-link {
-            // padding-left: gutter(.1);
             color: rgba($white, .75);
             text-decoration: none;
         }

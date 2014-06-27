@@ -3,6 +3,7 @@
     @include clearfix;
     padding: rhythm(1.5, 16px) span(3 of 24);
     background-color: $black;
+    border-top: .1em solid rgba($blue, .75);
     @include susy-breakpoint($bp-medium, $columns-medium) {
         @include span(18 of 18 no-gutters);
         padding: rhythm(1.5, 16px) span(2 of 18);
@@ -13,10 +14,12 @@
         padding: rhythm(1.5, 16px) span(1 of 12);
     }
     &-lede {
-        color: $white;
-        text-align: center;
-        @extend %xlarge-font;
         margin-top: 0;
+        text-align: center;
+        color: $white;
+        text-shadow: 0 0 0 darken($black, 25%);
+        filter: progid:DXImageTransform.Microsoft.Glow(Color=black,Strength=1); /* IE<10 */
+        @extend %xlarge-font;
         opacity: .75;
     }
     &-button {

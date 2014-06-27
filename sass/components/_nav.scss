@@ -105,4 +105,5 @@
 //AngularJS Mobile Behavior/Animation for Fly-in Menu
 .nav-menu.navmove {
     @include translate3d(0%, 0, 0);
+    // @include transition-timing-function(cubic-bezier(0.1, 0.84, 0.22, 1) );
 }

@@ -15,8 +15,25 @@
         @include span(12 of 12 no-gutters);
         padding: 0 span(1 of 12) 0 span(1 of 12);
     }
+    p {
+        @extend %base-font;
+        strong {
+            text-decoration: underline;
+        }
+    }
+    a {
+        color: rgba($cyan, .75);
+        font-weight: 700;
+        &:hover {
+            color: $cyan;
+        }
+    }
 }
 
 .entry-title {
     margin-bottom: rhythm(2, 16px);
+    padding: rhythm(.25, 16px) 0;
+    @extend %xlarge-font;
+    border-top: solid rgba($white, .75) .01em;
+    border-bottom: solid rgba($white, .75) .01em;
 }

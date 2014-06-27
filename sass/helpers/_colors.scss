@@ -6,5 +6,8 @@ $white: lighten($black, 65%);
 
 $cyan: darken(cyan, 15%);
 
+$blue: rgb(5, 79, 163);
+$red: rgb(238, 28, 45);
+
 $content-gradient: linear-gradient(top, $black 0%, $black-lite 100%);
 $nav-gradient: linear-gradient(top, rgba($black, .9) 0%, rgba($black-lite, .9) 100%);
