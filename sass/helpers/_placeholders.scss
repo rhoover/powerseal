@@ -20,7 +20,7 @@
 %action {
     position: relative;
     @include transition(border 0.3s ease-in, box-shadow 0.3s ease-in);
-    line-height: rhythm(7.5, 16px);
+    height: rhythm(8, 16px);
     text-align: center;
     color: $white;
     text-decoration: none;
@@ -29,8 +29,7 @@
     &:before {
         position: absolute;
         width: 100%;
-        height: 100%;
-        top: 0;
+        height: rhythm(8, 16px);
         left: 0;
         color: rgba($white, .15);
         font-size: 138px;

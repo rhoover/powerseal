@@ -31,9 +31,12 @@
 }
 
 .entry-title {
-    margin-bottom: rhythm(2, 16px);
-    padding: rhythm(.25, 16px) 0;
     @extend %xlarge-font;
-    border-top: solid rgba($white, .75) .01em;
-    border-bottom: solid rgba($white, .75) .01em;
+    margin-left: -75%;
+    margin-right: -75%;
+    margin-bottom: rhythm(2, 16px);
+    margin-top: 0;
+    padding: rhythm(.25, 16px) 0 rhythm(.25, 16px) 75%;
+    border-top: .05em solid rgba($white, .1);
+    border-bottom: .05em solid rgba($white, .1);
 }

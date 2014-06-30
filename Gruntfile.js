@@ -29,45 +29,35 @@ module.exports = function (grunt) {
         ngmin: {
           dist: {
             files: [{
-              expand: true,
-              cwd: '<%=psv2.jsCustom %>',
-              src: '*.js',
-              dest: '.tmp/concat/scripts'
+              // expand: true,
+              // cwd: '<%=psv2.production %>/<%=psv2.jsCustom %>',
+              src: '<%=psv2.production %>/<%=psv2.jsCustom %>/psv2.js',
+              dest: '<%=psv2.production %>/<%=psv2.jsCustom %>/psv2.js'
             }]
           }
         },
         //
         //let's all join together
         //
-        // concat: {
-        //     psv2: {
-        //         src: [
-                    // '<%=psv2.jsCustom %>/app.js',
-                    // '<%=psv2.jsCustom %>/services/memberjson.js',
-                    // '<%=psv2.jsCustom %>/services/storageservice.js',
-                    // '<%=psv2.jsCustom %>/services/googlemap.js',
-                    // '<%=psv2.jsCustom %>/filters/memberpagefilter.js',
-                    // '<%=psv2.jsCustom %>/controllers/memberlist.js',
-                    // '<%=psv2.jsCustom %>/controllers/memberpage.js',
-                    // '<%=psv2.jsCustom %>/controllers/allmembermap.js',
-                    // '<%=psv2.jsCustom %>/directives/bannerimage.js',
-                    // '<%=psv2.jsCustom %>/directives/backbutton.js',
-                    // '<%=psv2.jsCustom %>/directives/showsocial.js',
-                    // '<%=psv2.jsCustom %>/directives/membermap.js',
-                    // '<%=psv2.jsCustom %>/directives/allmembermap.js',
-                    // '<%=psv2.jsCustom %>/directives/menumover.js'
-        //         ],
-        //         dest: '<%=psv2.production %>/js/psv2/psv2.min.js'
-        //     },
-        //     angular: {
-        //         src: [
-        //         '<%=psv2.jsLibraries %>/angular/angular.min.js',
-        //         '<%=psv2.jsLibraries %>/angular-animate/angular-animate.min.js',
-        //         '<%=psv2.jsLibraries %>/angular-touch/angular-touch.min.js'
-        //         ],
-        //         dest: '<%=psv2.production %>/js/libraries/all-angular.min.js'
-        //     }
-        // },
+        concat: {
+            psv2: {
+                src: [
+                    '<%=psv2.jsCustom %>/app.js',
+                    '<%=psv2.jsCustom %>/directives/responsive-trigger.js',
+                    '<%=psv2.jsCustom %>/directives/backbutton.js'
+
+                ],
+                dest: '<%=psv2.production %>/<%=psv2.jsCustom %>/psv2.js'
+            },
+            angular: {
+                src: [
+                '<%=psv2.jsLibraries %>/angular/angular.min.js',
+                '<%=psv2.jsLibraries %>/angular-animate/angular-animate.min.js',
+                '<%=psv2.jsLibraries %>/angular-touch/angular-touch.min.js'
+                ],
+                dest: '<%=psv2.production %>/js/libraries/all-angular.min.js'
+            }
+        },
 
         //
         // Copy files not handled in other tasks
@@ -82,7 +72,7 @@ module.exports = function (grunt) {
                         '*.php',
                         // 'inc/*', //solved by tweaking functions.php
                         // 'languages/*', //solved by tweaking functions.php
-                        // 'style.css',
+                        'style.css',
                         // 'js/libraries/angular/angular.min.js',
                         'fonts/*',
                         'images/*.png',
@@ -96,13 +86,14 @@ module.exports = function (grunt) {
         //
         //Minify the CSS
         //
-        // cssmin: {
-        //     minify: {
-        //         expand: true,
-        //         src: ['*.css', '!*.min.css'],
-        //         dest: '<%=psv2.production %>'
-        //     }
-        // },
+        cssmin: {
+            minify: {
+                // expand: true,
+                // src: ['*.css', '!*.min.css'],
+                src: '<%=psv2.production %>/style.css',
+                dest: '<%=psv2.production %>/style.css'
+            }
+        },
 
         //
         //Revision the files
@@ -110,8 +101,8 @@ module.exports = function (grunt) {
         filerev: {
             dist: {
                 src: [
-                '<%=psv2.production %>/js/psv2/{,*/}*.js',
-                '<%=psv2.production %>/js/libraries/{,*/}*.js'
+                '<%=psv2.production %>/<%=psv2.jsCustom %>/psv2.js',
+                '<%=psv2.production %>/<%=psv2.jsLibraries %>/all-angular.min.js'
                 ]
             }
         }
@@ -123,18 +114,12 @@ module.exports = function (grunt) {
     //
     grunt.registerTask('build', [
         'clean:production',
-        'ngmin',
-        'useminPrepare',
-        'concat',
-        'cssmin',
-        'uglify',
-        'filerev',
-        'usemin',
-        // 'concat:psv2',
-        // 'concat:angular',
         'copy:production',
-         // 'cssmin:minify',
-         // 'rev'
+        'concat:psv2',
+        'concat:angular',
+        'cssmin',
+        'ngmin',
+        'filerev'
      ]);
 
 
